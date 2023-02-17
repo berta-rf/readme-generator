@@ -1,7 +1,9 @@
-const fs = require("fs");
+const fs = require('fs');
 const path = require('path');
-const inquirer = require("inquirer");
+const inquirer = require('inquirer');
 const generateMarkdown = require("./generateMarkdown");
+const filename = 'README.md';
+
 
 // array of questions for user
 const questions = [
@@ -31,12 +33,12 @@ const questions = [
         message: 'Enter installation instructions',
     },
     {
-        type: 'editor',
+        type: 'input',
         name: 'usage',
         message: 'Enter information on how to use and examples',
     },
     {
-        type: 'editor',
+        type: 'input',
         name: 'tests',
         message: 'Write tests for your application and examples on how to run them',
     },
@@ -60,22 +62,24 @@ const questions = [
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile
+function writeToFile(filename, data) {
+    
+    fs.writeFile(filename, data, (err) => {
+        err ? console.log(err) : console.log('README file created');
+    });
 
 }
 
 // function to initialize program
-function prompts() {
+function prompt() {
 
     inquirer
     .prompt(questions)
     .then((data) => {
-        console.log(data)
-        // writeToFile(data);
+        writeToFile(filename, generateMarkdown(data));
     })
     
 }
 
 // function call to initialize program
-prompts();
+prompt();

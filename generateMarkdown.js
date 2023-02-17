@@ -1,70 +1,71 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `
 
-          ![GitHub License](https://img.shields.io/badge/License-${data.license}-yellow.svg)
+# ${data.title}
 
-
-          ## 🎯 Description
-
-          ${data.description}
+![GitHub License](https://img.shields.io/badge/License-${data.license}-yellow.svg)
 
 
-          ## Table of Contents (Optional)
+## 🎯 Description
 
-          - [Installation](#installation)
-          - [Usage](#usage)
-          - [Tests](#tests)
-          - [Questions](#questions)
-          - [Credits](#credits)
-          - [Contributing](#howtocontribute)
-          - [License](#license)
+${data.description}
 
 
-          ## 🛠 Installation
+## Table of Contents
 
-          ${data.installation}
-
-
-          ## 💻 Usage
-
-          ${data.usage}
-              
-            ![App Screenshot](assets/images/screenshot.png)
-
-
-          ## 🔍 Tests
-
-          ${data.tests}
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tests](#tests)
+- [Questions](#questions)
+- [Credits](#credits)
+- [Contributing](#howtocontribute)
+- [License](#license)
 
 
-          ## 💬 Questions
-          
-          Contact me if you have any questions!
+## 🛠 Installation
 
-          - [Email](${data.email})
-          - [GitHub profile](${data.githubUsername})
+${data.installation}
+
+
+## 💻 Usage
+
+${data.usage}
     
-
-          ## 🤝 Credits
-
-          ${data.credits}
+![App Screenshot](assets/images/screenshot.png)
 
 
-          ## 💪 Contributing
+## 🔍 Tests
 
-          Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-          ${data.contributing}
+${data.tests}
 
 
-          ## 📖 License
+## 💬 Questions
 
-          This project is licensed under the terms of the ${data.license}.
-        
+Contact me if you have any questions!
 
+- Drop me an email [${data.email}](mailto:${data.email})
+- Check out my GitHub profile [${data.githubUsername}](https://github.com/${data.githubUsername})
+
+
+## 🤝 Credits
+
+${data.credits}
+
+
+## 💪 Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+${data.contributing}
+
+
+## 📖 License
+
+This project is licensed under the terms of the ${data.license} License.
 
 `;
+
 }
 
 module.exports = generateMarkdown;
