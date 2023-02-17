@@ -31,23 +31,22 @@ const questions = [
         message: 'Enter installation instructions',
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'usage',
-        message: 'Enter instructions and examples for use',
+        message: 'Enter information on how to use and examples',
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'tests',
         message: 'Write tests for your application and examples on how to run them',
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'contributing',
         message: 'Enter guidelines for others to contribute to your project',
     },
-    
     {
-        type: 'input',
+        type: 'editor',
         name: 'credits',
         message: 'List collaborators (gitHub profile links) and any resources or assets that need attributtion',
     },
@@ -55,19 +54,28 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What license do you want for your project?',
-        choices: ['MIT', 'Apache 2.0', 'GPLv3', 'GPLv2', 'LGPLv2.1', 'BSD 3-Clause', 'BSD 2-Clause', 'ISC', 'Unlicense'],
+        choices: ['MIT', 'Apache_2.0', 'GPL_v3', 'GPL_v2', 'LGPL_v3', 'BSD_3--Clause', 'BSD_2--Clause', 'ISC', 'Unlicense', 'WTFPL'],
     },
     
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
+    fs.writeFile
+
 }
 
 // function to initialize program
-function init() {
+function prompts() {
+
+    inquirer
+    .prompt(questions)
+    .then((data) => {
+        console.log(data)
+        // writeToFile(data);
+    })
     
 }
 
 // function call to initialize program
-init();
+prompts();
