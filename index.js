@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
+const emailValidator = require("email-validator");
 const generateMarkdown = require("./generateMarkdown");
 const filename = 'README.md';
 
@@ -16,6 +17,11 @@ const questions = [
         type: 'input',
         name: 'email',
         message: 'Enter your email address',
+        validate: (input) => {
+            // if it returns true it's valid input, otherwise it prompts user to enter valid email
+           return emailValidator.validate(input) ? true : 'Enter a valid email address';
+
+        }    
     },
     {
         type: 'input',
@@ -27,31 +33,31 @@ const questions = [
         name: 'description',
         message: 'Write a description of your project',
     },
-    {
-        type: 'input',
-        name: 'installation',
-        message: 'Enter installation instructions',
-    },
-    {
-        type: 'input',
-        name: 'usage',
-        message: 'Enter information on how to use and examples',
-    },
-    {
-        type: 'input',
-        name: 'tests',
-        message: 'Write tests for your application and examples on how to run them',
-    },
-    {
-        type: 'editor',
-        name: 'contributing',
-        message: 'Enter guidelines for others to contribute to your project',
-    },
-    {
-        type: 'editor',
-        name: 'credits',
-        message: 'List collaborators (gitHub profile links) and any resources or assets that need attributtion',
-    },
+    // {
+    //     type: 'editor',
+    //     name: 'installation',
+    //     message: 'Enter installation instructions',
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'usage',
+    //     message: 'Enter information on how to use and examples',
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'tests',
+    //     message: 'Write tests for your application and examples on how to run them',
+    // },
+    // {
+    //     type: 'editor',
+    //     name: 'contributing',
+    //     message: 'Enter guidelines for others to contribute to your project',
+    // },
+    // {
+    //     type: 'editor',
+    //     name: 'credits',
+    //     message: 'List collaborators (gitHub profile links) and any resources or assets that need attributtion',
+    // },
     {
         type: 'list',
         name: 'license',
