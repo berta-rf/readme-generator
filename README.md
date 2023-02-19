@@ -48,7 +48,7 @@ In the Usage section, there’s a placeholder for an App screenshot. If you want
   
 ![App Screenshot](./assets/images/screenshot.png)
 
-[Click here for a walkthrough video of the app](https://drive.google.com/file/d/1Yrybqn1N41OLQXA-ls77VCC1xrVq8M_K/view?usp=share_link)
+[Click here for a walkthrough video of the app](https://drive.google.com/file/d/1Yrybqn1N41OLQXA-ls77VCC1xrVq8M_K/view?usp=sharing)
 
 
 
