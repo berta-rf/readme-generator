@@ -11,13 +11,13 @@ This README generator is a command-line application that dynamically generates a
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Tests](#tests)
-- [Questions](#questions)
-- [Credits](#credits)
-- [Contributing](#contributing)
-- [License](#license)
+- [🛠 Installation](#🛠-installation)
+- [💻 Usage](#💻-usage)
+- [🔍 Tests](#🔍-tests)
+- [💬 Questions](#💬-questions)
+- [🤝 Credits](#🤝-credits)
+- [💪 Contributing](#💪-contributing)
+- [📖 License](#📖-license)
 
 
 
