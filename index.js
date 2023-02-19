@@ -1,5 +1,4 @@
 const fs = require('fs');
-const path = require('path');
 const inquirer = require('inquirer');
 const emailValidator = require("email-validator");
 const generateMarkdown = require("./generateMarkdown");
@@ -33,31 +32,31 @@ const questions = [
         name: 'description',
         message: 'Write a description of your project',
     },
-    // {
-    //     type: 'editor',
-    //     name: 'installation',
-    //     message: 'Enter installation instructions',
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'usage',
-    //     message: 'Enter information on how to use and examples',
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'tests',
-    //     message: 'Write tests for your application and examples on how to run them',
-    // },
-    // {
-    //     type: 'editor',
-    //     name: 'contributing',
-    //     message: 'Enter guidelines for others to contribute to your project',
-    // },
-    // {
-    //     type: 'editor',
-    //     name: 'credits',
-    //     message: 'List collaborators (gitHub profile links) and any resources or assets that need attributtion',
-    // },
+    {
+        type: 'editor',
+        name: 'installation',
+        message: 'Enter installation instructions',
+    },
+    {
+        type: 'editor',
+        name: 'usage',
+        message: 'Enter information on how to use and examples',
+    },
+    {
+        type: 'editor',
+        name: 'tests',
+        message: 'Write tests for your application and examples on how to run them',
+    },
+    {
+        type: 'editor',
+        name: 'contributing',
+        message: 'Enter guidelines for others to contribute to your project',
+    },
+    {
+        type: 'editor',
+        name: 'credits',
+        message: 'List collaborators (gitHub profile links) and any resources or assets that need attributtion',
+    },
     {
         type: 'list',
         name: 'license',
@@ -77,7 +76,7 @@ function writeToFile(filename, data) {
 }
 
 // function to initialize program
-function prompt() {
+function promptUser() {
 
     inquirer
     .prompt(questions)
@@ -88,4 +87,4 @@ function prompt() {
 }
 
 // function call to initialize program
-prompt();
+promptUser();

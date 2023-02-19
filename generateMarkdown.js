@@ -17,7 +17,7 @@ ${data.description}
 - [Tests](#tests)
 - [Questions](#questions)
 - [Credits](#credits)
-- [Contributing](#howtocontribute)
+- [Contributing](#contributing)
 - [License](#license)
 
 
@@ -60,7 +60,7 @@ ${data.contributing}
 
 ## 📖 License
 
-This project is licensed under the terms of the **${data.license} License**.
+This project is licensed under the terms of the **${data.license} License**. See [LICENSE](LICENSE) for more information.
 
 `;}
 
